@@ -1,15 +1,24 @@
-package demo.zhangxu.zhangxudemo;
+package demo.zhangxu.zhangxudemo.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import demo.zhangxu.zhangxudemo.R;
 
-    @Override
+public class MainActivity extends BaseActivity {
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.main_title);
         //张旭 、
         //window测试
+
     }
+
+    @Override
+    public void initView() {
+
+    }
+
 }

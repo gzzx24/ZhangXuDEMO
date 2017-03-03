@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ZhangXuDEMO</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <!--首页 开始 -->
+    <string name="main_title">错误列表</string>
+    <!--首页 结束 -->
+
+    <!--详细页 开始 -->
+    <!--详细页 结束 -->
 </resources>
