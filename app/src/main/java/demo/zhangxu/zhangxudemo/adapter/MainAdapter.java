@@ -19,10 +19,6 @@ import demo.zhangxu.zhangxudemo.entity.CarFailCode;
  * 
  */
 public class MainAdapter extends BaseAdapter {
-	private static final String REFUSE    = "0";// 提醒查看
-	private static final String INTERVIEW = "1";// 面试
-	private static final String remark    = "2";// 备注
-//	private ArrayList<HashMap<String, Object>> data;
 	private List<CarFailCode> data;
 	private LayoutInflater layoutInflater;
 	private Context context;
