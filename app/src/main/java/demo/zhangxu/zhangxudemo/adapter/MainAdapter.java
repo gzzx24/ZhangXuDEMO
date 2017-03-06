@@ -12,12 +12,6 @@ import java.util.List;
 import demo.zhangxu.zhangxudemo.R;
 import demo.zhangxu.zhangxudemo.entity.CarFailCode;
 
-/**
- * 我的申请>-待发简历-
- * 
- * @author yangjing
- * 
- */
 public class MainAdapter extends BaseAdapter {
 	private List<CarFailCode> data;
 	private LayoutInflater layoutInflater;
@@ -29,14 +23,12 @@ public class MainAdapter extends BaseAdapter {
 		this.data 			= data;
 		this.layoutInflater = LayoutInflater.from(context);
 	}
-
 	/**
 	 * 获取列数
 	 */
 	public int getCount() {
 		return data.size();
 	}
-
 	/**
 	 * 获取某一位置的数据
 	 */
@@ -71,15 +63,11 @@ public class MainAdapter extends BaseAdapter {
 		} else {
 			holder = (Holder) convertView.getTag();
 		}
-		// 初始化状态 解决滑动数据混乱
-
 		holder.tv_code.setText("id1992");
 		holder.tv_content.setText("电压过高");
 
-
 		return convertView;
 	}
-
 	public final class Holder {
 		// 错误码
 		public TextView tv_code;
