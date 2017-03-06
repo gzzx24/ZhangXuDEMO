@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">ZhangXuDEMO</string>
     <string name="title_activity_base">BaseActivity</string>
+    <string name="back">返回</string>
     <!--首页 开始 -->
     <string name="main_title">错误列表</string>
     <!--首页 结束 -->
 
     <!--详细页 开始 -->
+    <string name="info_btn_help">服务援助</string>
+    <string name="info_btn_line">线束位置</string>
+    <string name="info_btn_plug">插头位置</string>
+    <string name="info_btn_component">零件位置</string>
+    <string name="info_lable_tips">提示</string>
+    <string name="info_lable_notice">注意</string>
     <!--详细页 结束 -->
 </resources>
