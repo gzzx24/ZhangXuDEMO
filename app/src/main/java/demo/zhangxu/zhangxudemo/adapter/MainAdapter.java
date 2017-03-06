@@ -1,23 +1,18 @@
 package demo.zhangxu.zhangxudemo.adapter;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import java.util.List;
-
 import demo.zhangxu.zhangxudemo.R;
 import demo.zhangxu.zhangxudemo.entity.CarFailCode;
-
 public class MainAdapter extends BaseAdapter {
 	private List<CarFailCode> data;
 	private LayoutInflater layoutInflater;
 	private Context context;
 	private String saveStr;
-
 	public MainAdapter(Context context, List<CarFailCode> data) {
 		this.context 		= context;
 		this.data 			= data;
@@ -35,7 +30,6 @@ public class MainAdapter extends BaseAdapter {
 	public Object getItem(int position) {
 		return data.get(position);
 	}
-
 	/**
 	 * 获取唯一标识
 	 */
@@ -68,6 +62,7 @@ public class MainAdapter extends BaseAdapter {
 
 		return convertView;
 	}
+
 	public final class Holder {
 		// 错误码
 		public TextView tv_code;
