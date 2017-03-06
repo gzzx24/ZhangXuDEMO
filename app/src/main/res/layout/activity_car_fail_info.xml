@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_car_fail_info"
     android:layout_width="match_parent"
@@ -15,24 +16,80 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_info_size"
+        android:lineSpacingMultiplier="1.5"
         android:id="@+id/tv_fail_info" />
 
-    <TextView
-        android:text="TextView"
+    <RelativeLayout
+        android:id="@+id/rl_tips"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_fail_info"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:id="@+id/tv_fail_tips" />
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_tips"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?android:attr/alertDialogIcon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/iv_tips" />
+        <TextView
+            android:text="提示"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_info_size"
+            android:id="@+id/tv_tips_title"
+            android:layout_toRightOf="@+id/iv_tips"
+            android:layout_alignParentTop="true" />
 
-    <TextView
-        android:text="TextView"
+        <TextView
+            android:text="提示内容"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_info_size"
+            android:id="@+id/tv_fail_tips"
+            android:layout_below="@+id/tv_tips_title"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_notice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_fail_tips"
-        android:layout_marginTop="15dp"
-        android:id="@+id/tv_fail_notice" />
+        android:layout_below="@+id/rl_tips"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?android:attr/alertDialogIcon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/iv_notice" />
+        <TextView
+            android:text="注意"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_info_size"
+            android:id="@+id/tv_notice_title"
+            android:layout_toRightOf="@+id/iv_notice"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:text="注意事项"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_notice_title"
+            android:textSize="@dimen/tv_info_size"
+            android:id="@+id/tv_fail_notice" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -41,6 +98,7 @@
         android:layout_centerHorizontal="true">
         <Button
             android:text="@string/back"
+            android:textSize="@dimen/btn_info_size"
             android:drawableLeft="@mipmap/title_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,22 +107,33 @@
             android:layout_alignBaseline="@+id/btn_help"
             android:id="@+id/btn_back" />
 
+        <Button
+            android:text="@string/info_btn_help"
+            android:textSize="@dimen/btn_info_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btn_help" />
 
         <Button
             android:text="@string/info_btn_plug"
+            android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="101dp"
-            android:layout_marginEnd="101dp"
+            android:layout_marginRight="160dp"
             android:layout_alignBaseline="@+id/btn_help"
+            android:layout_toLeftOf="@+id/btn_help"
+            android:layout_toStartOf="@+id/btn_help"
             android:id="@+id/btn_plug" />
 
 
         <Button
             android:text="@string/info_btn_component"
+            android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_component"
@@ -75,20 +144,13 @@
 
         <Button
             android:text="@string/info_btn_line"
+            android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_line"
             android:layout_alignBaseline="@+id/btn_help"
             android:layout_toLeftOf="@+id/btn_component"
             android:layout_toStartOf="@+id/btn_component" />
-
-        <Button
-            android:text="@string/info_btn_help"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/btn_help" />
 
     </RelativeLayout>
 </RelativeLayout>
