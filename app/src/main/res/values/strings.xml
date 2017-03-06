@@ -7,6 +7,7 @@
     <!--首页 结束 -->
 
     <!--详细页 开始 -->
+    <string name="info_btn_title">详细信息</string>
     <string name="info_btn_help">服务援助</string>
     <string name="info_btn_line">线束位置</string>
     <string name="info_btn_plug">插头位置</string>

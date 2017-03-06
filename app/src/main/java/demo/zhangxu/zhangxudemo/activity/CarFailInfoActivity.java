@@ -28,7 +28,7 @@ public class CarFailInfoActivity extends AppCompatActivity {
     }
 
     public void initView() {
-        setTitle("详细内容");
+        setTitle(R.string.info_btn_title);
         tv_fail_info = (TextView)findViewById(R.id.tv_fail_info);
         tv_fail_tips = (TextView)findViewById(R.id.tv_fail_tips);
         tv_fail_notice = (TextView)findViewById(R.id.tv_fail_notice);
