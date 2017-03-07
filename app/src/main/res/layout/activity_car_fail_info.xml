@@ -23,7 +23,18 @@
             android:background="@color/colorbackgroud"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/abl"
+        android:layout_above="@+id/rl_button"
+        android:layout_marginBottom="5dp">
 
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +45,7 @@
         android:textSize="@dimen/tv_info_size"
         android:lineSpacingMultiplier="1.5"
         android:id="@+id/tv_fail_info"
-        android:layout_below="@+id/abl" />
+        />
 
     <RelativeLayout
         android:id="@+id/rl_tips"
@@ -125,10 +136,14 @@
             android:layout_alignParentStart="true" />
     </RelativeLayout>
 
+
+</RelativeLayout>
+    </ScrollView>
     <RelativeLayout
+        android:id="@+id/rl_button"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
@@ -136,7 +151,7 @@
             android:text="@string/info_btn_help"
             android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginRight="@dimen/activity_vertical_margin"
             android:gravity="center"
             android:layout_alignParentRight="true"
@@ -149,7 +164,7 @@
             android:text="@string/info_btn_line"
             android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:gravity="center"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:id="@+id/btn_line"
@@ -161,7 +176,7 @@
             android:text="@string/info_btn_component"
             android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:gravity="center"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:id="@+id/btn_component"
@@ -173,7 +188,7 @@
             android:text="@string/info_btn_plug"
             android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:gravity="center"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:id="@+id/btn_plug"
