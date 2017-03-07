@@ -14,5 +14,6 @@
     <string name="info_btn_component">零件位置</string>
     <string name="info_lable_tips">提示</string>
     <string name="info_lable_notice">注意</string>
+    <string name="title_activity_image_view">ImageViewActivity</string>
     <!--详细页 结束 -->
 </resources>

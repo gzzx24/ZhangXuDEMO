@@ -5,38 +5,49 @@
     android:id="@+id/activity_car_fail_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="demo.zhangxu.zhangxudemo.activity.CarFailInfoActivity">
 
-    <TextView
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@color/colorbackgroud"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:textSize="@dimen/tv_info_size"
         android:lineSpacingMultiplier="1.5"
-        android:id="@+id/tv_fail_info" />
+        android:id="@+id/tv_fail_info"
+        android:layout_below="@+id/abl" />
 
     <RelativeLayout
         android:id="@+id/rl_tips"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
         android:layout_below="@+id/tv_fail_info"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:padding="10dp"
         android:background="@drawable/border_tips"
         android:layout_centerHorizontal="true">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="?android:attr/alertDialogIcon"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/iv_tips" />
+
         <TextView
             android:text="提示"
             android:layout_width="wrap_content"
@@ -44,6 +55,7 @@
             android:textSize="@dimen/tv_info_size"
             android:id="@+id/tv_tips_title"
             android:layout_toRightOf="@+id/iv_tips"
+            android:layout_marginLeft="5dp"
             android:layout_alignParentTop="true" />
 
         <TextView
@@ -59,6 +71,15 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?android:attr/alertDialogIcon"
+            android:id="@+id/iv_tips"
+            android:layout_above="@+id/tv_fail_tips"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
 
     </RelativeLayout>
 
@@ -66,19 +87,14 @@
         android:id="@+id/rl_notice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
         android:layout_below="@+id/rl_tips"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:padding="10dp"
         android:background="@drawable/border_tips"
         android:layout_centerHorizontal="true">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="?android:attr/alertDialogIcon"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/iv_notice" />
+
         <TextView
             android:text="注意"
             android:layout_width="wrap_content"
@@ -87,6 +103,7 @@
             android:textColor="@android:color/holo_red_light"
             android:id="@+id/tv_notice_title"
             android:layout_toRightOf="@+id/iv_notice"
+            android:layout_marginLeft="5dp"
             android:layout_alignParentTop="true" />
         <TextView
             android:text="注意事项"
@@ -97,69 +114,72 @@
             android:lineSpacingMultiplier="1.2"
             android:textSize="@dimen/tv_info_size"
             android:id="@+id/tv_fail_notice" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?android:attr/alertDialogIcon"
+            android:id="@+id/iv_notice"
+            android:layout_above="@+id/tv_fail_notice"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorbackgroud"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
-        <Button
-            android:text="@string/back"
-            android:textSize="@dimen/btn_info_size"
-            android:drawableLeft="@mipmap/title_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignBaseline="@+id/btn_help"
-            android:id="@+id/btn_back" />
 
         <Button
             android:text="@string/info_btn_help"
             android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:gravity="center"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/white"
+            android:background="@drawable/border_button"
             android:id="@+id/btn_help" />
 
-        <Button
-            android:text="@string/info_btn_plug"
-            android:textSize="@dimen/btn_info_size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="160dp"
-            android:layout_alignBaseline="@+id/btn_help"
-            android:layout_toLeftOf="@+id/btn_help"
-            android:layout_toStartOf="@+id/btn_help"
-            android:id="@+id/btn_plug" />
-
-
-        <Button
-            android:text="@string/info_btn_component"
-            android:textSize="@dimen/btn_info_size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_component"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/btn_plug"
-            android:layout_toStartOf="@+id/btn_plug"
-            android:layout_alignBaseline="@+id/btn_help"/>
 
         <Button
             android:text="@string/info_btn_line"
             android:textSize="@dimen/btn_info_size"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:id="@+id/btn_line"
-            android:layout_alignBaseline="@+id/btn_help"
-            android:layout_toLeftOf="@+id/btn_component"
-            android:layout_toStartOf="@+id/btn_component" />
+            android:textColor="@android:color/white"
+            android:background="@drawable/border_button"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:text="@string/info_btn_component"
+            android:textSize="@dimen/btn_info_size"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:id="@+id/btn_component"
+            android:textColor="@android:color/white"
+            android:background="@drawable/border_button"
+            android:layout_toRightOf="@+id/btn_line"/>
+
+        <Button
+            android:text="@string/info_btn_plug"
+            android:textSize="@dimen/btn_info_size"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:id="@+id/btn_plug"
+            android:textColor="@android:color/white"
+            android:background="@drawable/border_button"
+            android:layout_toRightOf="@+id/btn_component"/>
 
     </RelativeLayout>
 </RelativeLayout>
