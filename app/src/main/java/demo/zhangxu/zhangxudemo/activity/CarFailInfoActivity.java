@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import demo.zhangxu.zhangxudemo.R;
 
@@ -104,7 +103,12 @@ public class CarFailInfoActivity extends AppCompatActivity {
         btn_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CarFailInfoActivity.this, "服务救援按钮点击事件", Toast.LENGTH_SHORT).show();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("title", getString(R.string.info_btn_component));
+                Intent intent = new Intent(CarFailInfoActivity.this,HelpActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }

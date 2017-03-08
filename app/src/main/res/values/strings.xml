@@ -16,4 +16,11 @@
     <string name="info_lable_notice">注意</string>
     <string name="title_activity_image_view">ImageViewActivity</string>
     <!--详细页 结束 -->
+
+    <!--援助页 开始 -->
+    <string name="help_list_title">当前故障码（汇报给维修站）</string>
+    <string name="help_local_title">服务站</string>
+    <string name="help_btn_info">发送故障现象</string>
+    <string name="help_btn_code">发送故障码</string>
+    <!--援助页 结束 -->
 </resources>
