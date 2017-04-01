@@ -3,12 +3,12 @@
     <string name="title_activity_base">BaseActivity</string>
     <string name="back">返回</string>
     <!--首页 开始 -->
-    <string name="main_title">错误列表</string>
+    <string name="main_title">故障一览</string>
     <!--首页 结束 -->
 
     <!--详细页 开始 -->
     <string name="info_btn_title">详细信息</string>
-    <string name="info_btn_help">服务援助</string>
+    <string name="info_btn_help">服务\n援助</string>
     <string name="info_btn_line">线束位置</string>
     <string name="info_btn_plug">插头位置</string>
     <string name="info_btn_component">零件位置</string>
@@ -18,7 +18,7 @@
     <!--详细页 结束 -->
 
     <!--援助页 开始 -->
-    <string name="help_list_title">当前故障码（汇报给维修站）</string>
+    <string name="help_list_title">故障描述</string>
     <string name="help_local_title">服务站</string>
     <string name="help_btn_info">发送故障现象</string>
     <string name="help_btn_code">发送故障码</string>

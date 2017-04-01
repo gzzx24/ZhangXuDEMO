@@ -86,7 +86,7 @@ public class HelpActivity extends AppCompatActivity {
     }
 
     public void initView() {
-        tv_adrress = (TextView) findViewById(R.id.tv_adrress);
+//        tv_adrress = (TextView) findViewById(R.id.tv_adrress);
 
         spinner_province = (Spinner) findViewById(R.id.spinner_province);
         spinner_city = (Spinner) findViewById(R.id.spinner_city);
@@ -171,7 +171,7 @@ public class HelpActivity extends AppCompatActivity {
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
                                    long arg3) {
 //            target_dlbh = queuilist[arg2];
-            tv_adrress.setText("广东省 广州市 服务站客服联系方式：\n 0131－31182100 \n 0131－31182100 ");
+//            tv_adrress.setText("广东省 广州市 服务站客服联系方式：\n 0131－31182100 \n 0131－31182100 ");
         }
 
         public void onNothingSelected(AdapterView<?> arg0) {

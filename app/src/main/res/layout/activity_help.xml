@@ -5,6 +5,7 @@
     android:id="@+id/activity_help"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/bg"
     tools:context="demo.zhangxu.zhangxudemo.activity.HelpActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/abl"
@@ -26,10 +27,9 @@
         android:text="@string/help_list_title"
         android:textColor="@android:color/white"
         android:textSize="@dimen/tv_info_size"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/abl"
-        android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:padding="5dp"
         android:background="@color/colorbackgroud"
@@ -44,16 +44,16 @@
         android:layout_below="@+id/tv_fail_list_title" />
 
     <TextView
-        android:text="@string/help_local_title"
+        android:text=""
         android:textColor="@android:color/white"
         android:textSize="@dimen/tv_info_size"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="5dp"
         android:layout_below="@+id/listViewFail"
         android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:padding="5dp"
-        android:background="@color/colorbackgroud"
+        android:background="@android:color/white"
         android:id="@+id/tv_local_title"/>
 
     <RelativeLayout
@@ -64,65 +64,58 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
-        <Button
-            android:text="@string/help_btn_info"
-            android:textSize="@dimen/btn_info_size"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:id="@+id/btn_line"
-            android:textColor="@android:color/white"
-            android:background="@drawable/border_button"
-            android:layout_alignParentLeft="true" />
-
-        <Button
-            android:text="@string/help_btn_code"
-            android:textSize="@dimen/btn_info_size"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:id="@+id/btn_component"
-            android:textColor="@android:color/white"
-            android:background="@drawable/border_button"
-            android:layout_toRightOf="@+id/btn_line"/>
-
     </RelativeLayout>
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorbackgroud"
         android:id="@+id/spinner_province"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_below="@+id/tv_local_title" />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/spinner_province"
+        android:background="@color/colorbackgroud"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:id="@+id/spinner_city"
-        android:layout_below="@+id/tv_local_title" />
+        android:layout_below="@+id/spinner_province" />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorbackgroud"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/tv_local_title"
-        android:layout_toRightOf="@+id/spinner_city"
-        android:layout_toEndOf="@+id/spinner_city"
+        android:layout_below="@+id/spinner_city"
         android:id="@+id/spinner_area" />
 
-    <TextView
-        android:text="吉林省 长春市 服务站客服联系方式：\n0431－81182100\n0431－81182100"
-        android:textSize="@dimen/tv_info_size"
+    <!--<TextView-->
+        <!--android:text="吉林省 长春市 服务站客服联系方式：\n0431－81182100\n0431－81182100"-->
+        <!--android:textSize="@dimen/tv_info_size"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tv_local_title"-->
+        <!--android:id="@+id/tv_adrress"-->
+        <!--android:layout_above="@+id/rl_button"-->
+        <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+        <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+        <!--android:layout_marginBottom="@dimen/activity_vertical_margin"-->
+        <!--android:layout_toRightOf="@+id/tv_fail_list_title"-->
+        <!--android:layout_toEndOf="@+id/tv_fail_list_title" />-->
+
+    <ListView
+        android:id="@+id/listViewAdrress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner_province"
-        android:id="@+id/tv_adrress"
-        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_height="150dp"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/tv_local_title"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/tv_fail_list_title"
+        android:layout_toEndOf="@+id/tv_fail_list_title"
         android:layout_above="@+id/rl_button" />
-
-
 </RelativeLayout>

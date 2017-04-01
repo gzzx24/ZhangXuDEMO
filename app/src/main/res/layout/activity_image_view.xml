@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@mipmap/bg"
     tools:context="demo.zhangxu.zhangxudemo.activity.ImageViewActivity">
 
+
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -22,6 +25,49 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_image_view" />
+    <demo.zhangxu.zhangxudemo.utils.DragImageView
+        android:id="@+id/iv_zoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/abl"
+        android:layout_toLeftOf="@+id/btn_help"
+        android:layout_toStartOf="@+id/btn_help" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <Button
+        android:text="@string/info_btn_help"
+        android:textSize="@dimen/btn_info_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@drawable/border_button"
+        android:id="@+id/btn_help"
+        android:layout_below="@+id/abl"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/a1"
+        android:layout_below="@+id/btn_help"
+        android:layout_alignRight="@+id/btn_help"
+        android:layout_alignEnd="@+id/btn_help"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/a3"
+        android:layout_below="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageView2" />
+</RelativeLayout>

@@ -25,7 +25,7 @@ public class CarFailInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_fail_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.info_btn_title);
+        toolbar.setTitle("进气压力温度传感器电压过高");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -48,12 +48,9 @@ public class CarFailInfoActivity extends AppCompatActivity {
         btn_component = (Button)findViewById(R.id.btn_component);
         btn_help = (Button)findViewById(R.id.btn_help);
 
-        tv_fail_info.setText("—检查进气压力温度传感器插头是否松动、脱落或损坏；线束是否损坏。\n " +
-                "—拔下传感器插头，检查传感器管脚是否损坏/腐蚀，重新连接传感器插头。\n" +
-                "—检查故障是否消失。");
-        tv_fail_tips.setText("检查时需举升驾驶室；并断开电源总开关。");
-        tv_fail_notice.setText("正确拔插接插件，避免接插件端子进水和油污，保证插接器插接牢靠。\n" +
-                "谨慎操作，必要时请与维修站联系，尽快将车辆送至维修站进行检修。");
+        tv_fail_info.setText("—检查进气压力温度传感器插头是否松动、脱落或损坏；线束是否损坏。");
+        tv_fail_tips.setText("—拔下传感器插头，检查传感器管脚是否损坏/腐蚀，重新连接传感器插头。");
+        tv_fail_notice.setText("—检查故障是否消失。");
 
 //        // 返回点击事件
 //        btn_back.setOnClickListener(new View.OnClickListener() {

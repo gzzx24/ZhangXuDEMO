@@ -51,7 +51,7 @@ public class ImageViewActivity extends AppCompatActivity{
         setContentView(R.layout.activity_image_view);
         String title = this.getIntent().getStringExtra("title");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(title);
+        toolbar.setTitle("进气压力温度传感器电压过高");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -75,7 +75,7 @@ public class ImageViewActivity extends AppCompatActivity{
         window_height = dm.heightPixels;
 
         dragImageView = (DragImageView) findViewById(R.id.iv_zoom);
-        Bitmap bmp = BitmapUtil.ReadBitmapById(this, R.mipmap.you,
+        Bitmap bmp = BitmapUtil.ReadBitmapById(this, R.mipmap.zhishi,
                 window_width, window_height);
         // ����ͼƬ
         dragImageView.setImageBitmap(bmp);

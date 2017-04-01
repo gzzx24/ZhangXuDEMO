@@ -2,39 +2,70 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:id="@+id/tv_code"
-        android:textSize="@dimen/tv_info_size"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:gravity="left|center_vertical" />
+    android:layout_height="wrap_content"
+    xmlns:amdroid="http://schemas.android.com/tools">
 
 
 
-    <TextView
-        android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/tv_info"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:textSize="@dimen/tv_info_size"
-        android:layout_marginRight="10dp"
-        android:gravity="left|center_vertical"
-        android:layout_toRightOf="@+id/tv_code"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView" />
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@mipmap/em_ic_right_arrow"
-        android:layout_marginRight="50dp"
-        android:id="@+id/imageView"
-        android:layout_alignParentRight="true"/>
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/iv_title" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/iv_info"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/iv_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="infoText"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        amdroid:translationz="10"
+        android:padding="5dp"
+        android:id="@+id/tv_title"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:background="#10000000"
+        android:layout_alignTop="@+id/iv_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/tv_info"
+        android:layout_alignStart="@+id/tv_info" />
+
+    <TextView
+        android:text="titleTextVie"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:id="@+id/tv_info"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:background="@color/colorfailtitle"
+        android:elevation="5dp"
+        amdroid:translationz="5"
+        android:layout_alignTop="@+id/iv_info"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/iv_info"
+        android:layout_toEndOf="@+id/iv_info"
+        android:layout_alignBaseline="@+id/iv_info" />
+
 </RelativeLayout>
