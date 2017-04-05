@@ -12,7 +12,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@mipmap/ic_launcher"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/iv_title" />
@@ -22,7 +22,7 @@
         android:layout_height="50dp"
         app:srcCompat="@mipmap/ic_launcher"
         android:id="@+id/iv_info"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/iv_title"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -52,7 +52,7 @@
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:padding="5dp"
         android:id="@+id/tv_info"
         android:ellipsize="end"

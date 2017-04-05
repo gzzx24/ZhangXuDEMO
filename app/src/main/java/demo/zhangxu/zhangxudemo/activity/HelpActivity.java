@@ -15,14 +15,17 @@ import java.util.List;
 
 import demo.zhangxu.zhangxudemo.R;
 import demo.zhangxu.zhangxudemo.adapter.HelpAdapter;
+import demo.zhangxu.zhangxudemo.adapter.AddressAdapter;
 import demo.zhangxu.zhangxudemo.entity.CarFailCode;
 
 public class HelpActivity extends AppCompatActivity {
 
     //列表
     private ListView listViewFail;
+    private ListView listViewAdrress;
     //自定义BaseAdapter
     private HelpAdapter adapter;
+    private AddressAdapter addressAdapter;
     private Spinner spinner_province;
     private Spinner spinner_city;
     private Spinner spinner_area;
@@ -127,9 +130,22 @@ public class HelpActivity extends AppCompatActivity {
 
             failList.add(carFailCode);
         }
-
-        adapter=new HelpAdapter(HelpActivity.this,failList);
+        adapter = new HelpAdapter(HelpActivity.this,failList);
         listViewFail.setAdapter(adapter);
+
+
+
+        listViewAdrress = (ListView) findViewById(R.id.listViewAdrress);
+        List<CarFailCode> addressList=new ArrayList<>();
+        for(int i=0;i<8;i++){
+            CarFailCode carFailCode=new CarFailCode();
+            carFailCode.setCode("code"+i);
+            carFailCode.setContent("content:"+i);
+
+            addressList.add(carFailCode);
+        }
+        addressAdapter = new AddressAdapter(HelpActivity.this,addressList);
+        listViewAdrress.setAdapter(addressAdapter);
     }
 
     // 选择 目标排队编号 事件 监听器

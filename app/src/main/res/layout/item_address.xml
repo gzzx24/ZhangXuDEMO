@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@android:color/white">
+
+    <!--<TextView-->
+        <!--android:text="TextView"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:id="@+id/tv_code"-->
+        <!--android:textSize="@dimen/tv_info_size"-->
+        <!--android:maxLines="1"-->
+        <!--android:ellipsize="end"-->
+        <!--android:gravity="left|center_vertical" />-->
+
+
+
+    <TextView
+        android:text="哈尔滨第二服务站 "
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/tv_title"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:layout_alignBottom="@+id/tv_address"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_code"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="备品电话 "
+        android:textColor="@android:color/black"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/tv_spares_phone"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_work_Phone"
+        android:layout_toStartOf="@+id/tv_work_Phone" />
+
+    <TextView
+        android:text="24小时工作手机 "
+        android:textColor="@android:color/black"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/tv_work_Phone"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="哈尔滨市道外区天恒大街5 号 "
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/tv_address"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:layout_below="@+id/tv_code"
+        android:layout_toRightOf="@+id/tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="服务电话 "
+        android:textColor="@android:color/black"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/tv_service_phone"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_spares_phone"
+        android:layout_toStartOf="@+id/tv_spares_phone" />
+
+    <TextView
+        android:text="0431"
+        android:textColor="@android:color/black"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/tv_code"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/tv_info_size"
+        android:gravity="left|center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_service_phone"
+        android:layout_toStartOf="@+id/tv_service_phone" />
+
+
+</RelativeLayout>
