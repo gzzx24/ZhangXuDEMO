@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/bg"
     tools:context="demo.zhangxu.zhangxudemo.activity.HelpActivity">
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/abl"
         android:layout_width="match_parent"
@@ -14,115 +15,110 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:theme="@style/AppTheme.AppBarOverlay">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:titleTextAppearance="@style/Toolbar.TitleText"
             android:background="@color/colorbackgroud"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:text="@string/help_list_title"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/tv_info_size"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/abl"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:padding="5dp"
-        android:background="@color/colorbackgroud"
-        android:id="@+id/tv_fail_list_title" />
-    <ListView
-        android:id="@+id/listViewFail"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tv_fail_list_title" />
 
-    <TextView
-        android:text=""
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/tv_info_size"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_below="@+id/listViewFail"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:padding="5dp"
-        android:background="@android:color/white"
-        android:id="@+id/tv_local_title"/>
 
-    <RelativeLayout
-        android:id="@+id/rl_button"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginBottom="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/tv_fail_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@color/colorbackgroud"
+                android:layout_below="@+id/abl"
+                android:padding="5dp"
+                android:text="@string/help_list_title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tv_info_size" />
 
-    </RelativeLayout>
+            <ListView
+                android:id="@+id/listViewFail"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/tv_fail_list_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin" />
 
-    <Spinner
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_province"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/tv_local_title" />
+            <TextView
+                android:id="@+id/tv_local_title"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/listViewFail"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tv_info_size" />
 
-    <Spinner
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:id="@+id/spinner_city"
-        android:layout_below="@+id/spinner_province" />
+            <RelativeLayout
+                android:id="@+id/rl_button"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp">
 
-    <Spinner
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/spinner_city"
-        android:id="@+id/spinner_area" />
+            </RelativeLayout>
 
-    <!--<TextView-->
-        <!--android:text="吉林省 长春市 服务站客服联系方式：\n0431－81182100\n0431－81182100"-->
-        <!--android:textSize="@dimen/tv_info_size"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@+id/tv_local_title"-->
-        <!--android:id="@+id/tv_adrress"-->
-        <!--android:layout_above="@+id/rl_button"-->
-        <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
-        <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
-        <!--android:layout_marginBottom="@dimen/activity_vertical_margin"-->
-        <!--android:layout_toRightOf="@+id/tv_fail_list_title"-->
-        <!--android:layout_toEndOf="@+id/tv_fail_list_title" />-->
-<include
-    android:id="@+id/title"
-    layout="@layout/item_address_title"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginRight="@dimen/activity_vertical_margin"
-    android:layout_marginLeft="@dimen/activity_vertical_margin"
-    android:layout_below="@+id/tv_local_title"
-    android:layout_toRightOf="@+id/tv_fail_list_title"
-    android:layout_toEndOf="@+id/tv_fail_list_title"></include>
-    <ListView
-        android:id="@+id/listViewAdrress"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/title"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@+id/tv_fail_list_title"
-        android:layout_toEndOf="@+id/tv_fail_list_title"
-        android:layout_above="@+id/rl_button"
-        android:background="@android:color/white"/>
+            <Spinner
+                android:id="@+id/spinner_province"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:layout_below="@+id/tv_local_title"
+                android:layout_marginLeft="@dimen/activity_vertical_margin" />
+
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:layout_below="@+id/spinner_province"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+            <Spinner
+                android:id="@+id/spinner_area"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:layout_below="@+id/spinner_city"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+            <include
+                android:id="@+id/title"
+                layout="@layout/item_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_local_title"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_toEndOf="@+id/tv_fail_list_title"
+                android:layout_toRightOf="@+id/tv_fail_list_title"></include>
+
+            <ListView
+                android:id="@+id/listViewAdrress"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_above="@+id/rl_button"
+                android:layout_below="@+id/title"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tv_fail_list_title"
+                android:background="@android:color/white"
+                android:layout_toRightOf="@+id/tv_fail_list_title" />
+
 </RelativeLayout>

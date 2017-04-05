@@ -1,5 +1,6 @@
 package demo.zhangxu.zhangxudemo.activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -35,6 +36,10 @@ public class ImageViewActivity extends AppCompatActivity{
     private ImageView iv_zoom;
     private Button btn_big;
     private Button btn_small;
+    private Button btn_help;
+
+    private ImageView iv_info;
+    private ImageView iv_warning;
 //    private FrameLayout layout1;
     private RelativeLayout rl_image_view;
     private LinearLayout layoutImage;
@@ -55,13 +60,42 @@ public class ImageViewActivity extends AppCompatActivity{
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-//        btn_back = (Button)findViewById(R.id.btn_back_image);
-//        btn_back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+        btn_help = (Button)findViewById(R.id.btn_help);
+        // 服务救援按钮点击事件
+        btn_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Bundle bundle = new Bundle();
+                bundle.putString("title", getString(R.string.info_btn_component));
+                Intent intent = new Intent(ImageViewActivity.this,HelpActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+        iv_info = (ImageView) findViewById(R.id.iv_info);
+        iv_warning = (ImageView) findViewById(R.id.iv_warning);
+        iv_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(ImageViewActivity.this);
+                builder.setTitle("提示");
+                builder.setIcon(R.mipmap.a1);
+                builder.setMessage("检查时需举升驾驶室；并断开电源总开关。");
+                builder.show();
+            }
+        });
+
+        iv_warning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(ImageViewActivity.this);
+                builder.setTitle("注意");
+                builder.setIcon(R.mipmap.a3);
+                builder.setMessage("★正确拔插接插件，避免接插件端子进水和油污，保证插接器插接牢靠。★谨慎操作，必要时请与维修站联系，尽快将车辆送至维修站进行检修。");
+                builder.show();
+            }
+        });
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
