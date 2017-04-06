@@ -137,7 +137,7 @@ public class HelpActivity extends AppCompatActivity {
 
         listViewAdrress = (ListView) findViewById(R.id.listViewAdrress);
         List<CarFailCode> addressList=new ArrayList<>();
-        for(int i=0;i<2;i++){
+        for(int i=0;i<1;i++){
             CarFailCode carFailCode=new CarFailCode();
             carFailCode.setCode("code"+i);
             carFailCode.setContent("content:"+i);
