@@ -1,11 +1,13 @@
 package demo.zhangxu.zhangxudemo.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -34,6 +36,7 @@ public class HelpActivity extends AppCompatActivity {
     private ArrayAdapter<String> countyAdapter = null;    //县级适配器
     private TextView tv_adrress;
     static int provincePosition = 3;
+    private Button btn_map;
 
     //省级选项值
     private String[] province = new String[] {"北京","上海","天津","广东"};//,"重庆","黑龙江","江苏","山东","浙江","香港","澳门"};
@@ -90,7 +93,17 @@ public class HelpActivity extends AppCompatActivity {
 
     public void initView() {
 //        tv_adrress = (TextView) findViewById(R.id.tv_adrress);
-
+        btn_map = (Button) findViewById(R.id.btn_map);
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("title", getString(R.string.info_btn_line));
+                Intent intent = new Intent(HelpActivity.this,MapActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
         spinner_province = (Spinner) findViewById(R.id.spinner_province);
         spinner_city = (Spinner) findViewById(R.id.spinner_city);
         spinner_area = (Spinner) findViewById(R.id.spinner_area);

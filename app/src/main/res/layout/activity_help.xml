@@ -136,7 +136,7 @@
             android:layout_height="30dp"
             android:gravity="center"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:id="@+id/btn_line"
+            android:id="@+id/btn_map"
             android:textColor="@android:color/white"
             android:background="@drawable/border_button"
             android:layout_alignParentLeft="true" />
